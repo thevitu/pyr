@@ -28,6 +28,7 @@ public class Hero implements Serializable {
 	private int bonusIntelligence;
 	private int bonusHit;
 	private int bonusRHit;
+	private String image;
 	
 	public Long getId() {
 		return id;
@@ -76,6 +77,12 @@ public class Hero implements Serializable {
 	}
 	public void setBonusRHit(int bonusRHit) {
 		this.bonusRHit = bonusRHit;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 }

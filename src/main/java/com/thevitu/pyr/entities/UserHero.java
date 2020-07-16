@@ -11,8 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.springframework.data.rest.core.annotation.RestResource;
+
 @Entity
-public class UserHero implements Char, Serializable {
+public class UserHero implements Serializable {
 
 	/**
 	 * 
@@ -23,9 +25,11 @@ public class UserHero implements Char, Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
+	@RestResource(exported = false)
 	@ManyToOne(fetch = EAGER)
 	private BaseHero baseHero;
 	
+	@RestResource(exported = false)
 	@ManyToOne(fetch = EAGER)
 	private Hero hero;
 	

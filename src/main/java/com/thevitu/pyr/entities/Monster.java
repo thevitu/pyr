@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Monster implements Char, Serializable {
+public class Monster implements Serializable {
 
 
 	/**
@@ -89,6 +89,11 @@ public class Monster implements Char, Serializable {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "monster_" + getId();
 	}
 	
 }
